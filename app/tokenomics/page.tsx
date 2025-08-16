@@ -103,46 +103,84 @@ function TokenMetrics() {
       label: "Total Supply",
       value: "1,000,000,000",
       unit: "CVIBE",
-      icon: <img src="/icons/cvibecoin.svg" alt="coin" className="w-5 h-5" />,
+      icon: (
+        <svg
+          className="w-5 h-5 text-cyan-400"
+          fill="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+        </svg>
+      ),
     },
     {
       label: "Circulating Supply",
       value: "920,000,000",
       unit: "CVIBE",
       icon: (
-        <img
-          src="/icons/circulating.svg"
-          alt="circulating"
-          className="w-5 h-5"
-        />
+        <svg
+          className="w-5 h-5 text-cyan-400"
+          fill="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+        </svg>
       ),
     },
     {
       label: "Buy Tax",
       value: "0",
       unit: "%",
-      icon: <img src="/icons/buy-tax.svg" alt="buy tax" className="w-5 h-5" />,
+      icon: (
+        <svg
+          className="w-5 h-5 text-green-400"
+          fill="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z" />
+        </svg>
+      ),
     },
     {
       label: "Sell Tax",
       value: "0",
       unit: "%",
       icon: (
-        <img src="/icons/sell-tax.svg" alt="sell tax" className="w-5 h-5" />
+        <svg
+          className="w-5 h-5 text-red-400"
+          fill="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z" />
+        </svg>
       ),
     },
     {
       label: "Liquidity Pool",
       value: "Locked",
       unit: "Forever",
-      icon: <img src="/icons/locked.svg" alt="locked" className="w-5 h-5" />,
+      icon: (
+        <svg
+          className="w-5 h-5 text-yellow-400"
+          fill="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z" />
+        </svg>
+      ),
     },
     {
       label: "Contract",
       value: "Renounced",
       unit: "Verified",
       icon: (
-        <img src="/icons/verified.svg" alt="verified" className="w-5 h-5" />
+        <svg
+          className="w-5 h-5 text-green-400"
+          fill="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+        </svg>
       ),
     },
   ];
@@ -177,27 +215,41 @@ function SecurityFeatures() {
     {
       title: "Liquidity Locked",
       description: "LP tokens permanently locked to prevent rug pulls",
-      icon: <img src="/icons/locked.svg" alt="locked" className="w-8 h-8" />,
+      icon: (
+        <svg className="w-8 h-8 text-cyan-400" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z" />
+        </svg>
+      ),
       status: "Active",
     },
     {
       title: "Contract Renounced",
       description: "Ownership renounced, no one can modify the contract",
       icon: (
-        <img src="/icons/verified.svg" alt="verified" className="w-8 h-8" />
+        <svg className="w-8 h-8 text-red-400" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12,2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM4 12c0-4.42 3.58-8 8-8 1.85 0 3.55.63 4.9 1.69L5.69 16.9C4.63 15.55 4 13.85 4 12zm8 8c-1.85 0-3.55-.63-4.9-1.69L18.31 7.1C19.37 8.45 20 10.15 20 12c0 4.42-3.58 8-8 8z" />
+        </svg>
       ),
       status: "Verified",
     },
     {
       title: "No Mint Function",
       description: "Supply is fixed, no new tokens can be created",
-      icon: <img src="/icons/no-mint.svg" alt="no mint" className="w-8 h-8" />,
+      icon: (
+        <svg className="w-8 h-8 text-orange-400" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12,2l3.09 6.26L22,9.27l-5 4.87 1.18 6.88L12,17.77l-6.18 3.25L7,14.14 2,9.27l6.91-1.01L12,2z" />
+        </svg>
+      ),
       status: "Disabled",
     },
     {
       title: "Audit Complete",
       description: "Smart contract audited by security experts",
-      icon: <img src="/icons/audit.svg" alt="audit" className="w-8 h-8" />,
+      icon: (
+        <svg className="w-8 h-8 text-blue-400" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M12,7C13.4,7 14.8,8.6 14.8,10V11H16V16H8V11H9.2V10C9.2,8.6 10.6,7 12,7M12,8.2C11.2,8.2 10.4,8.7 10.4,10V11H13.6V10C13.6,8.7 12.8,8.2 12,8.2Z" />
+        </svg>
+      ),
       status: "Passed",
     },
   ];
@@ -340,13 +392,16 @@ export default function TokenomicsPage() {
           </div>
         </section>
 
-          {/* Detailed Tokenomics */}
+        {/* Detailed Tokenomics */}
         <section className="py-16 md:py-24 border-t border-cyan-300/20">
           <div className="container px-4 md:px-6">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-cyan-100 mb-4">Detailed Tokenomics</h2>
+              <h2 className="text-3xl font-bold text-cyan-100 mb-4">
+                Detailed Tokenomics
+              </h2>
               <p className="text-cyan-50/90 max-w-2xl mx-auto">
-                Comprehensive breakdown of CVIBE's economic model and token mechanics.
+                Comprehensive breakdown of CVIBE's economic model and token
+                mechanics.
               </p>
             </div>
 
@@ -356,15 +411,21 @@ export default function TokenomicsPage() {
                   <div className="space-y-4">
                     <div className="flex justify-between items-center p-3 bg-black/30 rounded-lg">
                       <span className="text-cyan-200">Token Standard</span>
-                      <span className="font-semibold text-cyan-100">ERC-20</span>
+                      <span className="font-semibold text-cyan-100">
+                        ERC-20
+                      </span>
                     </div>
                     <div className="flex justify-between items-center p-3 bg-black/30 rounded-lg">
                       <span className="text-cyan-200">Blockchain</span>
-                      <span className="font-semibold text-cyan-100">Ethereum</span>
+                      <span className="font-semibold text-cyan-100">
+                        Ethereum
+                      </span>
                     </div>
                     <div className="flex justify-between items-center p-3 bg-black/30 rounded-lg">
                       <span className="text-cyan-200">Max Supply</span>
-                      <span className="font-semibold text-cyan-100">1,000,000,000 CVIBE</span>
+                      <span className="font-semibold text-cyan-100">
+                        1,000,000,000 CVIBE
+                      </span>
                     </div>
                     <div className="flex justify-between items-center p-3 bg-black/30 rounded-lg">
                       <span className="text-cyan-200">Decimals</span>
@@ -372,7 +433,9 @@ export default function TokenomicsPage() {
                     </div>
                     <div className="flex justify-between items-center p-3 bg-black/30 rounded-lg">
                       <span className="text-cyan-200">Launch Type</span>
-                      <span className="font-semibold text-green-400">Fair Launch</span>
+                      <span className="font-semibold text-green-400">
+                        Fair Launch
+                      </span>
                     </div>
                   </div>
                 </GlassCard>
@@ -383,28 +446,46 @@ export default function TokenomicsPage() {
                       <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2"></div>
                       <div>
                         <strong className="text-cyan-100">No Presale:</strong>
-                        <span className="text-cyan-50/80"> No private or public presale rounds</span>
+                        <span className="text-cyan-50/80">
+                          {" "}
+                          No private or public presale rounds
+                        </span>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
                       <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2"></div>
                       <div>
-                        <strong className="text-cyan-100">No Team Allocation:</strong>
-                        <span className="text-cyan-50/80"> Team gets tokens same way as community</span>
+                        <strong className="text-cyan-100">
+                          No Team Allocation:
+                        </strong>
+                        <span className="text-cyan-50/80">
+                          {" "}
+                          Team gets tokens same way as community
+                        </span>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
                       <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2"></div>
                       <div>
-                        <strong className="text-cyan-100">Equal Opportunity:</strong>
-                        <span className="text-cyan-50/80"> Everyone starts on the same footing</span>
+                        <strong className="text-cyan-100">
+                          Equal Opportunity:
+                        </strong>
+                        <span className="text-cyan-50/80">
+                          {" "}
+                          Everyone starts on the same footing
+                        </span>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
                       <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2"></div>
                       <div>
-                        <strong className="text-cyan-100">Transparent Launch:</strong>
-                        <span className="text-cyan-50/80"> All transactions visible on-chain</span>
+                        <strong className="text-cyan-100">
+                          Transparent Launch:
+                        </strong>
+                        <span className="text-cyan-50/80">
+                          {" "}
+                          All transactions visible on-chain
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -417,25 +498,37 @@ export default function TokenomicsPage() {
                     <div className="bg-green-500/10 border border-green-400/30 rounded-lg p-4">
                       <div className="flex items-center gap-2 mb-2">
                         <div className="w-3 h-3 bg-green-400 rounded-full"></div>
-                        <span className="font-semibold text-green-400">Ethereum Mainnet</span>
+                        <span className="font-semibold text-green-400">
+                          Ethereum Mainnet
+                        </span>
                       </div>
-                      <p className="text-sm text-cyan-50/80">Primary deployment with full functionality</p>
+                      <p className="text-sm text-cyan-50/80">
+                        Primary deployment with full functionality
+                      </p>
                     </div>
 
                     <div className="bg-yellow-500/10 border border-yellow-400/30 rounded-lg p-4">
                       <div className="flex items-center gap-2 mb-2">
                         <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
-                        <span className="font-semibold text-yellow-400">Polygon (Q2 2025)</span>
+                        <span className="font-semibold text-yellow-400">
+                          Polygon (Q2 2025)
+                        </span>
                       </div>
-                      <p className="text-sm text-cyan-50/80">Lower fees for gaming and micro-transactions</p>
+                      <p className="text-sm text-cyan-50/80">
+                        Lower fees for gaming and micro-transactions
+                      </p>
                     </div>
 
                     <div className="bg-blue-500/10 border border-blue-400/30 rounded-lg p-4">
                       <div className="flex items-center gap-2 mb-2">
                         <div className="w-3 h-3 bg-blue-400 rounded-full"></div>
-                        <span className="font-semibold text-blue-400">Arbitrum (Q3 2025)</span>
+                        <span className="font-semibold text-blue-400">
+                          Arbitrum (Q3 2025)
+                        </span>
                       </div>
-                      <p className="text-sm text-cyan-50/80">DeFi integrations and advanced features</p>
+                      <p className="text-sm text-cyan-50/80">
+                        DeFi integrations and advanced features
+                      </p>
                     </div>
                   </div>
                 </GlassCard>
@@ -445,29 +538,47 @@ export default function TokenomicsPage() {
                     <div className="flex items-start gap-3">
                       <div className="w-2 h-2 bg-purple-400 rounded-full mt-2"></div>
                       <div>
-                        <strong className="text-cyan-100">DAO Structure:</strong>
-                        <span className="text-cyan-50/80"> Decentralized governance through token holders</span>
+                        <strong className="text-cyan-100">
+                          DAO Structure:
+                        </strong>
+                        <span className="text-cyan-50/80">
+                          {" "}
+                          Decentralized governance through token holders
+                        </span>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
                       <div className="w-2 h-2 bg-purple-400 rounded-full mt-2"></div>
                       <div>
                         <strong className="text-cyan-100">Voting Power:</strong>
-                        <span className="text-cyan-50/80"> 1 CVIBE = 1 vote on all proposals</span>
+                        <span className="text-cyan-50/80">
+                          {" "}
+                          1 CVIBE = 1 vote on all proposals
+                        </span>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
                       <div className="w-2 h-2 bg-purple-400 rounded-full mt-2"></div>
                       <div>
-                        <strong className="text-cyan-100">Proposal Threshold:</strong>
-                        <span className="text-cyan-50/80"> 1M+ CVIBE required to create proposals</span>
+                        <strong className="text-cyan-100">
+                          Proposal Threshold:
+                        </strong>
+                        <span className="text-cyan-50/80">
+                          {" "}
+                          1M+ CVIBE required to create proposals
+                        </span>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
                       <div className="w-2 h-2 bg-purple-400 rounded-full mt-2"></div>
                       <div>
-                        <strong className="text-cyan-100">Treasury Control:</strong>
-                        <span className="text-cyan-50/80"> Community controls development funds</span>
+                        <strong className="text-cyan-100">
+                          Treasury Control:
+                        </strong>
+                        <span className="text-cyan-50/80">
+                          {" "}
+                          Community controls development funds
+                        </span>
                       </div>
                     </div>
                   </div>
