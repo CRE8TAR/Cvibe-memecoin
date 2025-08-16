@@ -11,7 +11,7 @@ import AppProviders from "@/components/app-providers"
 export default function RoadmapPage() {
   return (
     <AppProviders>
-      <main className="relative min-h-[100dvh] text-purple-900">
+      <main className="relative min-h-[100dvh] text-cyan-100">
         {/* Hero */}
         <SectionWrapper
           id="roadmap-hero"
@@ -21,7 +21,7 @@ export default function RoadmapPage() {
           <div className="max-w-4xl">
             <Heading3D text="Roadmap" className="block" />
             <h1 className="sr-only">Roadmap</h1>
-            <p className="mt-4 max-w-2xl mx-auto text-base text-indigo-900 md:text-lg">
+            <p className="mt-4 max-w-2xl mx-auto text-base text-cyan-200 md:text-lg">
               Shipping in public. Iterating with the community. Here&apos;s how CVIBE grows from wave to wave.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row justify-center">
@@ -86,8 +86,8 @@ export default function RoadmapPage() {
 
             <div className="mt-10 grid items-center gap-10 md:grid-cols-2">
               <div>
-                <h3 className="text-xl font-semibold text-purple-900">Join the journey</h3>
-                <p className="mt-4 text-indigo-900">
+                <h3 className="text-xl font-semibold text-cyan-100">Join the journey</h3>
+                <p className="mt-4 text-cyan-200">
                   CVIBE evolves with its community. Share ideas, propose features, and ride the wave with us.
                 </p>
                 <div className="mt-6 flex items-center gap-3">
@@ -126,31 +126,31 @@ export default function RoadmapPage() {
                   className="rounded-full"
                 />
                 <div>
-                  <p className="font-semibold text-purple-900">CVIBE</p>
-                  <p className="text-xs text-indigo-900">Ride the meme wave responsibly.</p>
+                  <p className="font-semibold text-cyan-100">CVIBE</p>
+                  <p className="text-xs text-cyan-200">Ride the meme wave responsibly.</p>
                 </div>
               </div>
               <div className="flex flex-wrap items-center gap-4 text-sm">
-                <Link href="/" className="text-purple-900 hover:underline underline-offset-4">
+                <Link href="/" className="text-cyan-100 hover:underline underline-offset-4">
                   Home
                 </Link>
-                <Link href="/tokenomics" className="text-purple-900 hover:underline underline-offset-4">
+                <Link href="/tokenomics" className="text-cyan-100 hover:underline underline-offset-4">
                   Tokenomics
                 </Link>
-                <Link href="/whitepaper" className="text-purple-900 hover:underline underline-offset-4">
+                <Link href="/whitepaper" className="text-cyan-100 hover:underline underline-offset-4">
                   Whitepaper
                 </Link>
-                <Link href="/roadmap" className="text-purple-900 hover:underline underline-offset-4">
+                <Link href="/roadmap" className="text-cyan-100 hover:underline underline-offset-4">
                   Roadmap
                 </Link>
-                <Link href="/community" className="text-purple-900 hover:underline underline-offset-4">
+                <Link href="/community" className="text-cyan-100 hover:underline underline-offset-4">
                   Community
                 </Link>
               </div>
             </div>
-            <div className="flex items-center justify-between border-t border-purple-300/20 py-6 text-xs text-indigo-900">
+            <div className="flex items-center justify-between border-t border-purple-300/20 py-6 text-xs text-cyan-200">
               <p>&copy; {new Date().getFullYear()} CVIBE. All rights reserved.</p>
-              <p>Made with love and ocean vibes.</p>
+              <p>Made for Fun and Meme vibes.</p>
             </div>
           </div>
         </footer>

@@ -1,28 +1,40 @@
-import Image from "next/image"
-import Link from "next/link"
-import SectionWrapper from "@/components/section-wrapper"
-import Heading3D from "@/components/heading-3d-css"
-import Button3D from "@/components/button-3d"
-import WalletConnectButton from "@/components/wallet-connect-button"
-import FooterCoin3D from "@/components/footer-coin-3d"
-import GlassCard from "@/components/glass-card"
-import AppProviders from "@/components/app-providers"
+import Image from "next/image";
+import Link from "next/link";
+import SectionWrapper from "@/components/section-wrapper";
+import Heading3D from "@/components/heading-3d-css";
+import Button3D from "@/components/button-3d";
+import WalletConnectButton from "@/components/wallet-connect-button";
+import FooterCoin3D from "@/components/footer-coin-3d";
+import GlassCard from "@/components/glass-card";
+import AppProviders from "@/components/app-providers";
 
 function TokenomicsChart() {
   const data = [
-    { label: "Community", percentage: 92, color: "bg-cyan-400", description: "Fair distribution to community" },
-    { label: "CEX/LP/Market", percentage: 5, color: "bg-purple-400", description: "Exchange listings & liquidity" },
+    {
+      label: "Community",
+      percentage: 92,
+      color: "bg-cyan-400",
+      description: "Fair distribution to community",
+    },
+    {
+      label: "CEX/LP/Market",
+      percentage: 5,
+      color: "bg-purple-400",
+      description: "Exchange listings & liquidity",
+    },
     {
       label: "Treasury/Partnerships",
       percentage: 3,
       color: "bg-indigo-400",
       description: "Development & partnerships",
     },
-  ]
+  ];
 
   return (
     <div className="bg-cyan-50/10 backdrop-blur-sm rounded-xl border border-cyan-300/40 p-6">
-      <h3 className="text-xl font-semibold text-cyan-100 mb-6 text-center">Token Distribution</h3>
+      <h3 className="text-xl font-semibold text-cyan-100 mb-6 text-center">
+        Token Distribution
+      </h3>
 
       {/* Pie Chart Visual */}
       <div className="relative w-64 h-64 mx-auto mb-6">
@@ -39,15 +51,22 @@ function TokenomicsChart() {
         <div className="absolute inset-0">
           <div
             className="w-full h-full rounded-full border-8 border-cyan-400"
-            style={{ clipPath: "polygon(50% 50%, 50% 0%, 100% 0%, 100% 100%, 50% 100%)" }}
+            style={{
+              clipPath:
+                "polygon(50% 50%, 50% 0%, 100% 0%, 100% 100%, 50% 100%)",
+            }}
           ></div>
           <div
             className="absolute inset-0 w-full h-full rounded-full border-4 border-purple-400"
-            style={{ clipPath: "polygon(50% 50%, 50% 0%, 60% 0%, 60% 100%, 50% 100%)" }}
+            style={{
+              clipPath: "polygon(50% 50%, 50% 0%, 60% 0%, 60% 100%, 50% 100%)",
+            }}
           ></div>
           <div
             className="absolute inset-0 w-full h-full rounded-full border-2 border-indigo-400"
-            style={{ clipPath: "polygon(50% 50%, 50% 0%, 55% 0%, 55% 100%, 50% 100%)" }}
+            style={{
+              clipPath: "polygon(50% 50%, 50% 0%, 55% 0%, 55% 100%, 50% 100%)",
+            }}
           ></div>
         </div>
       </div>
@@ -63,26 +82,70 @@ function TokenomicsChart() {
               <div className={`w-4 h-4 rounded-full ${item.color}`}></div>
               <div>
                 <div className="font-semibold text-cyan-100">{item.label}</div>
-                <div className="text-xs text-cyan-200/70">{item.description}</div>
+                <div className="text-xs text-cyan-200/70">
+                  {item.description}
+                </div>
               </div>
             </div>
-            <div className="text-lg font-bold text-cyan-100">{item.percentage}%</div>
+            <div className="text-lg font-bold text-cyan-100">
+              {item.percentage}%
+            </div>
           </div>
         ))}
       </div>
     </div>
-  )
+  );
 }
 
 function TokenMetrics() {
   const metrics = [
-    { label: "Total Supply", value: "1,000,000,000", unit: "CVIBE", icon: "🪙" },
-    { label: "Circulating Supply", value: "920,000,000", unit: "CVIBE", icon: "🌊" },
-    { label: "Buy Tax", value: "0", unit: "%", icon: "💰" },
-    { label: "Sell Tax", value: "0", unit: "%", icon: "💸" },
-    { label: "Liquidity Pool", value: "Locked", unit: "Forever", icon: "🔒" },
-    { label: "Contract", value: "Renounced", unit: "Verified", icon: "✅" },
-  ]
+    {
+      label: "Total Supply",
+      value: "1,000,000,000",
+      unit: "CVIBE",
+      icon: <img src="/icons/cvibecoin.svg" alt="coin" className="w-5 h-5" />,
+    },
+    {
+      label: "Circulating Supply",
+      value: "920,000,000",
+      unit: "CVIBE",
+      icon: (
+        <img
+          src="/icons/circulating.svg"
+          alt="circulating"
+          className="w-5 h-5"
+        />
+      ),
+    },
+    {
+      label: "Buy Tax",
+      value: "0",
+      unit: "%",
+      icon: <img src="/icons/buy-tax.svg" alt="buy tax" className="w-5 h-5" />,
+    },
+    {
+      label: "Sell Tax",
+      value: "0",
+      unit: "%",
+      icon: (
+        <img src="/icons/sell-tax.svg" alt="sell tax" className="w-5 h-5" />
+      ),
+    },
+    {
+      label: "Liquidity Pool",
+      value: "Locked",
+      unit: "Forever",
+      icon: <img src="/icons/locked.svg" alt="locked" className="w-5 h-5" />,
+    },
+    {
+      label: "Contract",
+      value: "Renounced",
+      unit: "Verified",
+      icon: (
+        <img src="/icons/verified.svg" alt="verified" className="w-5 h-5" />
+      ),
+    },
+  ];
 
   return (
     <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -91,15 +154,22 @@ function TokenMetrics() {
           key={index}
           className="bg-cyan-50/10 backdrop-blur-sm rounded-xl border border-cyan-300/40 p-4 text-center"
         >
-          <div className="text-2xl mb-2">{metric.icon}</div>
+          {/* Icon wrapper */}
+          <div className="flex justify-center items-center w-12 h-12 mb-2">
+            {metric.icon}
+          </div>
+
           <div className="text-lg font-bold text-cyan-100 mb-1">
-            {metric.value} <span className="text-sm font-normal text-cyan-200/80">{metric.unit}</span>
+            {metric.value}{" "}
+            <span className="text-sm font-normal text-cyan-200/80">
+              {metric.unit}
+            </span>
           </div>
           <div className="text-sm text-cyan-200/70">{metric.label}</div>
         </div>
       ))}
     </div>
-  )
+  );
 }
 
 function SecurityFeatures() {
@@ -107,33 +177,38 @@ function SecurityFeatures() {
     {
       title: "Liquidity Locked",
       description: "LP tokens permanently locked to prevent rug pulls",
-      icon: "🔐",
+      icon: <img src="/icons/locked.svg" alt="locked" className="w-8 h-8" />,
       status: "Active",
     },
     {
       title: "Contract Renounced",
       description: "Ownership renounced, no one can modify the contract",
-      icon: "🚫",
+      icon: (
+        <img src="/icons/verified.svg" alt="verified" className="w-8 h-8" />
+      ),
       status: "Verified",
     },
     {
       title: "No Mint Function",
       description: "Supply is fixed, no new tokens can be created",
-      icon: "⛔",
+      icon: <img src="/icons/no-mint.svg" alt="no mint" className="w-8 h-8" />,
       status: "Disabled",
     },
     {
       title: "Audit Complete",
       description: "Smart contract audited by security experts",
-      icon: "🛡️",
+      icon: <img src="/icons/audit.svg" alt="audit" className="w-8 h-8" />,
       status: "Passed",
     },
-  ]
+  ];
 
   return (
     <div className="grid gap-6 md:grid-cols-2">
       {features.map((feature, index) => (
-        <div key={index} className="bg-cyan-50/10 backdrop-blur-sm rounded-xl border border-cyan-300/40 p-6">
+        <div
+          key={index}
+          className="bg-cyan-50/10 backdrop-blur-sm rounded-xl border border-cyan-300/40 p-6"
+        >
           <div className="flex items-start gap-4">
             <div className="text-3xl">{feature.icon}</div>
             <div className="flex-1">
@@ -149,7 +224,7 @@ function SecurityFeatures() {
         </div>
       ))}
     </div>
-  )
+  );
 }
 
 export default function TokenomicsPage() {
@@ -166,8 +241,8 @@ export default function TokenomicsPage() {
             <Heading3D text="Tokenomics" className="block" />
             <h1 className="sr-only">Tokenomics</h1>
             <p className="mt-4 max-w-2xl mx-auto text-base text-cyan-50/90 md:text-lg">
-              Simple, fair, and transparent. CVIBE is engineered for longevity with clean mechanics and community-first
-              distribution.
+              Simple, fair, and transparent. CVIBE is engineered for longevity
+              with clean mechanics and community-first distribution.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row justify-center">
               <Button3D href="/whitepaper" color="purple">
@@ -182,9 +257,12 @@ export default function TokenomicsPage() {
         <section className="py-16 md:py-24">
           <div className="container px-4 md:px-6">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-cyan-100 mb-4">Token Metrics</h2>
+              <h2 className="text-3xl font-bold text-cyan-100 mb-4">
+                Token Metrics
+              </h2>
               <p className="text-cyan-50/90 max-w-2xl mx-auto">
-                CVIBE features a clean and simple token structure designed for fairness and transparency.
+                CVIBE features a clean and simple token structure designed for
+                fairness and transparency.
               </p>
             </div>
             <TokenMetrics />
@@ -196,11 +274,14 @@ export default function TokenomicsPage() {
           <div className="container px-4 md:px-6">
             <div className="grid gap-12 lg:grid-cols-2 items-start">
               <div>
-                <h2 className="text-3xl font-bold text-cyan-100 mb-6">Token Distribution</h2>
+                <h2 className="text-3xl font-bold text-cyan-100 mb-6">
+                  Token Distribution
+                </h2>
                 <div className="space-y-6">
                   <GlassCard title="Community Allocation (92%)">
                     <p className="text-sm mb-3">
-                      The vast majority of tokens go directly to the community through fair launch mechanisms:
+                      The vast majority of tokens go directly to the community
+                      through fair launch mechanisms:
                     </p>
                     <ul className="text-sm space-y-2">
                       <li>• Fair launch liquidity pool</li>
@@ -211,7 +292,9 @@ export default function TokenomicsPage() {
                   </GlassCard>
 
                   <GlassCard title="Exchange & Liquidity (5%)">
-                    <p className="text-sm mb-3">Reserved for exchange listings and market making:</p>
+                    <p className="text-sm mb-3">
+                      Reserved for exchange listings and market making:
+                    </p>
                     <ul className="text-sm space-y-2">
                       <li>• CEX listing requirements</li>
                       <li>• Additional liquidity pools</li>
@@ -221,7 +304,9 @@ export default function TokenomicsPage() {
                   </GlassCard>
 
                   <GlassCard title="Treasury & Partnerships (3%)">
-                    <p className="text-sm mb-3">Minimal allocation for sustainable development:</p>
+                    <p className="text-sm mb-3">
+                      Minimal allocation for sustainable development:
+                    </p>
                     <ul className="text-sm space-y-2">
                       <li>• Development funding</li>
                       <li>• Strategic partnerships</li>
@@ -243,70 +328,151 @@ export default function TokenomicsPage() {
         <section className="py-16 md:py-24 border-t border-cyan-300/20">
           <div className="container px-4 md:px-6">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-cyan-100 mb-4">Security & Trust</h2>
+              <h2 className="text-3xl font-bold text-cyan-100 mb-4">
+                Security & Trust
+              </h2>
               <p className="text-cyan-50/90 max-w-2xl mx-auto">
-                CVIBE implements industry-leading security measures to protect the community and ensure long-term
-                sustainability.
+                CVIBE implements industry-leading security measures to protect
+                the community and ensure long-term sustainability.
               </p>
             </div>
             <SecurityFeatures />
           </div>
         </section>
 
-        {/* Utility & Use Cases */}
+          {/* Detailed Tokenomics */}
         <section className="py-16 md:py-24 border-t border-cyan-300/20">
           <div className="container px-4 md:px-6">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-cyan-100 mb-4">Utility & Use Cases</h2>
+              <h2 className="text-3xl font-bold text-cyan-100 mb-4">Detailed Tokenomics</h2>
               <p className="text-cyan-50/90 max-w-2xl mx-auto">
-                CVIBE tokens have multiple utilities within the ecosystem and beyond.
+                Comprehensive breakdown of CVIBE's economic model and token mechanics.
               </p>
             </div>
 
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              <GlassCard title="Gaming Rewards">
-                <div className="text-center mb-4">🎮</div>
-                <p className="text-sm">
-                  Earn CVIBE tokens by playing our baseball game and other community games. High scores = more rewards!
-                </p>
-              </GlassCard>
+            <div className="grid gap-8 lg:grid-cols-2">
+              <div className="space-y-6">
+                <GlassCard title="Token Economics">
+                  <div className="space-y-4">
+                    <div className="flex justify-between items-center p-3 bg-black/30 rounded-lg">
+                      <span className="text-cyan-200">Token Standard</span>
+                      <span className="font-semibold text-cyan-100">ERC-20</span>
+                    </div>
+                    <div className="flex justify-between items-center p-3 bg-black/30 rounded-lg">
+                      <span className="text-cyan-200">Blockchain</span>
+                      <span className="font-semibold text-cyan-100">Ethereum</span>
+                    </div>
+                    <div className="flex justify-between items-center p-3 bg-black/30 rounded-lg">
+                      <span className="text-cyan-200">Max Supply</span>
+                      <span className="font-semibold text-cyan-100">1,000,000,000 CVIBE</span>
+                    </div>
+                    <div className="flex justify-between items-center p-3 bg-black/30 rounded-lg">
+                      <span className="text-cyan-200">Decimals</span>
+                      <span className="font-semibold text-cyan-100">18</span>
+                    </div>
+                    <div className="flex justify-between items-center p-3 bg-black/30 rounded-lg">
+                      <span className="text-cyan-200">Launch Type</span>
+                      <span className="font-semibold text-green-400">Fair Launch</span>
+                    </div>
+                  </div>
+                </GlassCard>
 
-              <GlassCard title="Community Governance">
-                <div className="text-center mb-4">🗳️</div>
-                <p className="text-sm">
-                  Hold CVIBE to participate in community decisions, vote on proposals, and shape the future of the
-                  project.
-                </p>
-              </GlassCard>
+                <GlassCard title="Fair Launch Mechanics">
+                  <div className="space-y-3 text-sm">
+                    <div className="flex items-start gap-3">
+                      <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2"></div>
+                      <div>
+                        <strong className="text-cyan-100">No Presale:</strong>
+                        <span className="text-cyan-50/80"> No private or public presale rounds</span>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2"></div>
+                      <div>
+                        <strong className="text-cyan-100">No Team Allocation:</strong>
+                        <span className="text-cyan-50/80"> Team gets tokens same way as community</span>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2"></div>
+                      <div>
+                        <strong className="text-cyan-100">Equal Opportunity:</strong>
+                        <span className="text-cyan-50/80"> Everyone starts on the same footing</span>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2"></div>
+                      <div>
+                        <strong className="text-cyan-100">Transparent Launch:</strong>
+                        <span className="text-cyan-50/80"> All transactions visible on-chain</span>
+                      </div>
+                    </div>
+                  </div>
+                </GlassCard>
+              </div>
 
-              <GlassCard title="Staking Rewards">
-                <div className="text-center mb-4">💎</div>
-                <p className="text-sm">
-                  Stake your CVIBE tokens to earn additional rewards and support the network while earning passive
-                  income.
-                </p>
-              </GlassCard>
+              <div className="space-y-6">
+                <GlassCard title="Multi-Chain Expansion">
+                  <div className="space-y-4">
+                    <div className="bg-green-500/10 border border-green-400/30 rounded-lg p-4">
+                      <div className="flex items-center gap-2 mb-2">
+                        <div className="w-3 h-3 bg-green-400 rounded-full"></div>
+                        <span className="font-semibold text-green-400">Ethereum Mainnet</span>
+                      </div>
+                      <p className="text-sm text-cyan-50/80">Primary deployment with full functionality</p>
+                    </div>
 
-              <GlassCard title="NFT Marketplace">
-                <div className="text-center mb-4">🖼️</div>
-                <p className="text-sm">
-                  Use CVIBE to buy, sell, and trade ocean-themed NFTs in our upcoming marketplace ecosystem.
-                </p>
-              </GlassCard>
+                    <div className="bg-yellow-500/10 border border-yellow-400/30 rounded-lg p-4">
+                      <div className="flex items-center gap-2 mb-2">
+                        <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
+                        <span className="font-semibold text-yellow-400">Polygon (Q2 2025)</span>
+                      </div>
+                      <p className="text-sm text-cyan-50/80">Lower fees for gaming and micro-transactions</p>
+                    </div>
 
-              <GlassCard title="Premium Features">
-                <div className="text-center mb-4">⭐</div>
-                <p className="text-sm">
-                  Access exclusive features, early game releases, and premium community perks with CVIBE tokens.
-                </p>
-              </GlassCard>
+                    <div className="bg-blue-500/10 border border-blue-400/30 rounded-lg p-4">
+                      <div className="flex items-center gap-2 mb-2">
+                        <div className="w-3 h-3 bg-blue-400 rounded-full"></div>
+                        <span className="font-semibold text-blue-400">Arbitrum (Q3 2025)</span>
+                      </div>
+                      <p className="text-sm text-cyan-50/80">DeFi integrations and advanced features</p>
+                    </div>
+                  </div>
+                </GlassCard>
 
-              <GlassCard title="Merchant Payments">
-                <div className="text-center mb-4">🛒</div>
-                <p className="text-sm">
-                  Spend CVIBE at partner merchants and online stores. Growing ecosystem of accepting businesses.
-                </p>
-              </GlassCard>
+                <GlassCard title="Governance Model">
+                  <div className="space-y-3 text-sm">
+                    <div className="flex items-start gap-3">
+                      <div className="w-2 h-2 bg-purple-400 rounded-full mt-2"></div>
+                      <div>
+                        <strong className="text-cyan-100">DAO Structure:</strong>
+                        <span className="text-cyan-50/80"> Decentralized governance through token holders</span>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <div className="w-2 h-2 bg-purple-400 rounded-full mt-2"></div>
+                      <div>
+                        <strong className="text-cyan-100">Voting Power:</strong>
+                        <span className="text-cyan-50/80"> 1 CVIBE = 1 vote on all proposals</span>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <div className="w-2 h-2 bg-purple-400 rounded-full mt-2"></div>
+                      <div>
+                        <strong className="text-cyan-100">Proposal Threshold:</strong>
+                        <span className="text-cyan-50/80"> 1M+ CVIBE required to create proposals</span>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <div className="w-2 h-2 bg-purple-400 rounded-full mt-2"></div>
+                      <div>
+                        <strong className="text-cyan-100">Treasury Control:</strong>
+                        <span className="text-cyan-50/80"> Community controls development funds</span>
+                      </div>
+                    </div>
+                  </div>
+                </GlassCard>
+              </div>
             </div>
           </div>
         </section>
@@ -315,14 +481,19 @@ export default function TokenomicsPage() {
         <section className="py-16 md:py-24 border-t border-cyan-300/20">
           <div className="container px-4 md:px-6">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-cyan-100 mb-4">Economic Roadmap</h2>
+              <h2 className="text-3xl font-bold text-cyan-100 mb-4">
+                Economic Roadmap
+              </h2>
               <p className="text-cyan-50/90 max-w-2xl mx-auto">
                 Our planned economic developments and token utility expansions.
               </p>
             </div>
 
             <div className="grid gap-8 md:grid-cols-3">
-              <GlassCard title="Phase 1: Foundation" className="border-l-4 border-l-cyan-400">
+              <GlassCard
+                title="Phase 1: Foundation"
+                className="border-l-4 border-l-cyan-400"
+              >
                 <div className="space-y-3 text-sm">
                   <div className="flex items-center gap-2">
                     <span className="w-2 h-2 bg-green-400 rounded-full"></span>
@@ -343,7 +514,10 @@ export default function TokenomicsPage() {
                 </div>
               </GlassCard>
 
-              <GlassCard title="Phase 2: Expansion" className="border-l-4 border-l-purple-400">
+              <GlassCard
+                title="Phase 2: Expansion"
+                className="border-l-4 border-l-purple-400"
+              >
                 <div className="space-y-3 text-sm">
                   <div className="flex items-center gap-2">
                     <span className="w-2 h-2 bg-gray-400 rounded-full"></span>
@@ -364,7 +538,10 @@ export default function TokenomicsPage() {
                 </div>
               </GlassCard>
 
-              <GlassCard title="Phase 3: Ecosystem" className="border-l-4 border-l-indigo-400">
+              <GlassCard
+                title="Phase 3: Ecosystem"
+                className="border-l-4 border-l-indigo-400"
+              >
                 <div className="space-y-3 text-sm">
                   <div className="flex items-center gap-2">
                     <span className="w-2 h-2 bg-gray-400 rounded-full"></span>
@@ -411,34 +588,53 @@ export default function TokenomicsPage() {
                 />
                 <div>
                   <p className="font-semibold text-cyan-100">CVIBE</p>
-                  <p className="text-xs text-cyan-200/80">Ride the meme wave responsibly.</p>
+                  <p className="text-xs text-cyan-200/80">
+                    Ride the meme wave responsibly.
+                  </p>
                 </div>
               </div>
               <div className="flex flex-wrap items-center gap-4 text-sm">
-                <Link href="/" className="text-cyan-100 hover:underline underline-offset-4">
+                <Link
+                  href="/"
+                  className="text-cyan-100 hover:underline underline-offset-4"
+                >
                   Home
                 </Link>
-                <Link href="/tokenomics" className="text-cyan-100 hover:underline underline-offset-4">
+                <Link
+                  href="/tokenomics"
+                  className="text-cyan-100 hover:underline underline-offset-4"
+                >
                   Tokenomics
                 </Link>
-                <Link href="/whitepaper" className="text-cyan-100 hover:underline underline-offset-4">
+                <Link
+                  href="/whitepaper"
+                  className="text-cyan-100 hover:underline underline-offset-4"
+                >
                   Whitepaper
                 </Link>
-                <Link href="/roadmap" className="text-cyan-100 hover:underline underline-offset-4">
+                <Link
+                  href="/roadmap"
+                  className="text-cyan-100 hover:underline underline-offset-4"
+                >
                   Roadmap
                 </Link>
-                <Link href="/community" className="text-cyan-100 hover:underline underline-offset-4">
+                <Link
+                  href="/community"
+                  className="text-cyan-100 hover:underline underline-offset-4"
+                >
                   Community
                 </Link>
               </div>
             </div>
             <div className="flex items-center justify-between border-t border-cyan-300/20 py-6 text-xs text-cyan-50/90">
-              <p>&copy; {new Date().getFullYear()} CVIBE. All rights reserved.</p>
-              <p>Made with love and ocean vibes.</p>
+              <p>
+                &copy; {new Date().getFullYear()} CVIBE. All rights reserved.
+              </p>
+              <p>Made for Fun and Meme vibes.</p>
             </div>
           </div>
         </footer>
       </main>
     </AppProviders>
-  )
+  );
 }

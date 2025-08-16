@@ -1,17 +1,25 @@
-import Image from "next/image"
-import Link from "next/link"
-import SectionWrapper from "@/components/section-wrapper"
-import Heading3D from "@/components/heading-3d-css"
-import Button3D from "@/components/button-3d"
-import CoinTravel3D from "@/components/coin-travel-3d"
-import FooterCoin3D from "@/components/footer-coin-3d"
-import BuyCryptoButton from "@/components/buy-crypto-button"
-import BuyDebitButton from "@/components/buy-debit-button"
-import ContractAddress from "@/components/contract-address"
-import CTASection from "@/components/cta-section"
-import GlassCard from "@/components/glass-card"
+import Image from "next/image";
+import Link from "next/link";
+import SectionWrapper from "@/components/section-wrapper";
+import Heading3D from "@/components/heading-3d-css";
+import Button3D from "@/components/button-3d";
+import CoinTravel3D from "@/components/coin-travel-3d";
+import FooterCoin3D from "@/components/footer-coin-3d";
+import BuyCryptoButton from "@/components/buy-crypto-button";
+import BuyDebitButton from "@/components/buy-debit-button";
+import ContractAddress from "@/components/contract-address";
+import CTASection from "@/components/cta-section";
+import GlassCard from "@/components/glass-card";
 
-function SocialMediaCard({ href, title, description }: { href: string; title: string; description: string }) {
+function SocialMediaCard({
+  href,
+  title,
+  description,
+}: {
+  href: string;
+  title: string;
+  description: string;
+}) {
   return (
     <a
       href={href}
@@ -25,7 +33,7 @@ function SocialMediaCard({ href, title, description }: { href: string; title: st
         <p className="text-cyan-200/80 text-sm">{description}</p>
       </div>
     </a>
-  )
+  );
 }
 
 export default function Page() {
@@ -49,12 +57,15 @@ export default function Page() {
           </div>
 
           <p className="mt-6 max-w-2xl mx-auto text-lg text-cyan-50/90 leading-relaxed">
-            The community-powered token making waves. Built for speed, fairness and fun with ocean-sized memes and good
-            vibes. Join the movement and ride the tide of decentralization.
+            The community-powered token making waves. Built for speed, fairness
+            and fun with ocean-sized memes and good vibes. Join the movement and
+            ride the tide of decentralization.
           </p>
 
           <div className="mt-6 text-center">
-            <p className="text-lg text-cyan-100 font-semibold">Buy Now with a Debit Card or Crypto!</p>
+            <p className="text-lg text-cyan-100 font-semibold">
+              Buy Now with a Debit Card or Crypto!
+            </p>
           </div>
 
           <div className="mt-8 flex flex-col gap-4 sm:flex-row justify-center">
@@ -76,29 +87,35 @@ export default function Page() {
         <div className="grid items-center gap-12 md:grid-cols-2">
           <div>
             <p className="text-lg text-cyan-50/90 leading-relaxed">
-              CVIBE token is a next-gen meme coin engineered for virality, speed and community rewards. Crafted with
-              modern token standards, transparent tokenomics and zero team dump mechanics.
+              CVIBE token is a next-gen meme coin engineered for virality, speed
+              and community rewards. Crafted with modern token standards,
+              transparent tokenomics and zero team dump mechanics.
             </p>
             <ul className="mt-8 space-y-4 text-base">
               <li className="flex items-start gap-3">
                 <span className="mt-2 inline-block h-2 w-2 rounded-full bg-cyan-400" />
                 <span className="text-cyan-50/90">
-                  Fair launch, LP locked and renounced mint community first from day one.
+                  Fair launch, LP locked and renounced mint community first from
+                  day one.
                 </span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="mt-2 inline-block h-2 w-2 rounded-full bg-cyan-400" />
-                <span className="text-cyan-50/90">Optimized contract for low gas and high throughput.</span>
+                <span className="text-cyan-50/90">
+                  Optimized contract for low gas and high throughput.
+                </span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="mt-2 inline-block h-2 w-2 rounded-full bg-cyan-400" />
-                <span className="text-cyan-50/90">Rewards, quests and viral friendly referral drops.</span>
+                <span className="text-cyan-50/90">
+                  Rewards, quests and viral friendly referral drops.
+                </span>
               </li>
             </ul>
           </div>
           <div>
             <Image
-              src="/placeholder.svg?height=480&width=560"
+              src="/images/coinmeme.jpg"
               width={560}
               height={480}
               alt="CVIBE Visual"
@@ -115,13 +132,16 @@ export default function Page() {
         </div>
         <div className="grid gap-8 md:grid-cols-3">
           <GlassCard title="Vision">
-            Empower a global beach loving community to create culture. Fun, transparent and unstoppable.
+            Empower a global beach loving community to create culture. Fun,
+            transparent and unstoppable.
           </GlassCard>
           <GlassCard title="Tokenomics">
-            1,000,000,000 supply • 0% tax • LP locked • No presale • Renounced mint. Simple. Fair. Clean.
+            1,000,000,000 supply • 0% tax • LP locked • No presale • Renounced
+            mint. Simple. Fair. Clean.
           </GlassCard>
           <GlassCard title="Chain">
-            Deployed on a fast, low fee L1/L2. Verified contract and open analytics for full transparency.
+            Deployed on a fast, low fee L1/L2. Verified contract and open
+            analytics for full transparency.
           </GlassCard>
         </div>
       </SectionWrapper>
@@ -131,8 +151,9 @@ export default function Page() {
           <Heading3D text="Join Our Community" />
           <h2 className="sr-only">Join Our Community</h2>
           <p className="mt-4 text-lg text-cyan-50/90 max-w-2xl mx-auto">
-            Connect with thousands of CVIBE enthusiasts across all platforms. Share memes, get updates, and be part of
-            the ocean-themed revolution.
+            Connect with thousands of CVIBE enthusiasts across all platforms.
+            Share memes, get updates, and be part of the ocean-themed
+            revolution.
           </p>
         </div>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
@@ -169,13 +190,16 @@ export default function Page() {
         </div>
         <div className="grid gap-8 md:grid-cols-3">
           <GlassCard title="1. Choose Payment Method">
-            Buy directly with your debit card for instant purchase, or use crypto from your wallet for lower fees.
+            Buy directly with your debit card for instant purchase, or use
+            crypto from your wallet for lower fees.
           </GlassCard>
           <GlassCard title="2. Complete Purchase">
-            Follow the secure checkout process. Debit card purchases are processed instantly through our partners.
+            Follow the secure checkout process. Debit card purchases are
+            processed instantly through our partners.
           </GlassCard>
           <GlassCard title="3. Receive CVIBE">
-            Your CVIBE tokens will be sent directly to your wallet. Start riding the wave immediately!
+            Your CVIBE tokens will be sent directly to your wallet. Start riding
+            the wave immediately!
           </GlassCard>
         </div>
         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -200,12 +224,24 @@ export default function Page() {
           <h2 className="sr-only">Why CVIBE?</h2>
         </div>
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          <GlassCard title="Fair Launch">No presales or team allocations. Everyone surfs the same wave.</GlassCard>
-          <GlassCard title="Security First">Audited contract, LP locked and transparent analytics.</GlassCard>
-          <GlassCard title="Low Fees">Gas-optimized contract means more memes and fewer fees.</GlassCard>
-          <GlassCard title="Community Rewards">Quests, drops and incentives for active contributors.</GlassCard>
-          <GlassCard title="Partnerships">Collaborations with brands, artists and communities.</GlassCard>
-          <GlassCard title="Open & Transparent">Open-source and clear roadmap with governance.</GlassCard>
+          <GlassCard title="Fair Launch">
+            No presales or team allocations. Everyone surfs the same wave.
+          </GlassCard>
+          <GlassCard title="Security First">
+            Audited contract, LP locked and transparent analytics.
+          </GlassCard>
+          <GlassCard title="Low Fees">
+            Gas-optimized contract means more memes and fewer fees.
+          </GlassCard>
+          <GlassCard title="Community Rewards">
+            Quests, drops and incentives for active contributors.
+          </GlassCard>
+          <GlassCard title="Partnerships">
+            Collaborations with brands, artists and communities.
+          </GlassCard>
+          <GlassCard title="Open & Transparent">
+            Open-source and clear roadmap with governance.
+          </GlassCard>
         </div>
       </SectionWrapper>
 
@@ -227,7 +263,9 @@ export default function Page() {
               />
               <div>
                 <p className="font-semibold text-cyan-100">CVIBE</p>
-                <p className="text-xs text-cyan-200/80">Ride the meme wave responsibly.</p>
+                <p className="text-xs text-cyan-200/80">
+                  Ride the meme wave responsibly.
+                </p>
               </div>
             </div>
             <div className="flex flex-wrap items-center gap-4 text-sm">
@@ -270,5 +308,5 @@ export default function Page() {
         </div>
       </footer>
     </main>
-  )
+  );
 }

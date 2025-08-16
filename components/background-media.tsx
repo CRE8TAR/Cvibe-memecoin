@@ -1,11 +1,11 @@
-import Image from "next/image"
+import Image from "next/image";
 
 type BackgroundMediaProps = {
-  videoSrc?: string
-  posterSrc?: string
-  gifSrc?: string
-  overlayClassName?: string
-}
+  videoSrc?: string;
+  posterSrc?: string;
+  gifSrc?: string;
+  overlayClassName?: string;
+};
 
 /**
  * Fixed, full-viewport background media that sits behind all content.
@@ -13,7 +13,7 @@ type BackgroundMediaProps = {
  * - Falls back to GIF (and static poster) for reduced motion or when video is unavailable
  */
 export default function BackgroundMedia({
-  videoSrc = "https://cdn.coverr.co/videos/coverr-ocean-waves-1560/1080p.mp4",
+  videoSrc = "/cvibe.mp4",
   posterSrc = "/placeholder.svg?height=1080&width=1920",
   gifSrc = "/media/beach-loop.gif",
   overlayClassName = "from-black/70 via-black/60 to-black/80",
@@ -47,7 +47,9 @@ export default function BackgroundMedia({
       </div>
 
       {/* Global readability overlay */}
-      <div className={`absolute inset-0 bg-gradient-to-b ${overlayClassName}`} />
+      <div
+        className={`absolute inset-0 bg-gradient-to-b ${overlayClassName}`}
+      />
     </div>
-  )
+  );
 }
