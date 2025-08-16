@@ -9,7 +9,7 @@ export default function GamePage() {
       <section className="h-auto min-h-[180px] flex items-center justify-center px-4 py-8">
         <div className="max-w-4xl text-center w-full px-4">
           <SimpleHeading text="CVIBE Baseball Game" className="block" />
-          <h1 className="sr-only">CVIBE headshot Game</h1>
+          <h1 className="sr-only">CVIBE Head Shot Game</h1>
           <p className="mt-4 text-base text-cyan-50/90">
             Hit the target's head to earn CVIBE coins! Miss the head and it's
             game over.
