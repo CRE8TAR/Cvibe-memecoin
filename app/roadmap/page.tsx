@@ -99,7 +99,7 @@ export default function RoadmapPage() {
               </div>
               <div>
                 <Image
-                  src="/placeholder.svg?height=420&width=560"
+                  src="public/images/cvibecoin.png"
                   alt="Roadmap Milestones"
                   width={560}
                   height={420}
