@@ -1,9 +1,18 @@
 import type React from "react";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { Pirata_One } from 'next/font/google';
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
+
+// load Pirata One (only weight 400 available)
+
+const pirataOne = Pirata_One({
+  weight: "400",
+  subsets: ["latin"],
+})
+
 
 export const metadata: Metadata = {
   title: "CVIBE - Ride the Meme Wave",
@@ -18,7 +27,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-transparent`}>
+      <body className={`${pirataOne.className} bg-transparent`}>
         <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
           <video
             className="absolute inset-0 h-full w-full object-cover"

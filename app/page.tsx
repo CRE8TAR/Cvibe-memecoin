@@ -269,6 +269,14 @@ export default function Page() {
               </div>
             </div>
             <div className="flex flex-wrap items-center gap-4 text-sm">
+              <a
+                href="https://www.cre8tar.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-cyan-100 hover:text-cyan-200 hover:underline underline-offset-4 transition-colors"
+              >
+                CRE8TAR
+              </a>
               <Link
                 href="/"
                 className="text-cyan-100 hover:text-cyan-200 hover:underline underline-offset-4 transition-colors"
