@@ -1,6 +1,5 @@
 "use client";
-
-import Coin3D from "./coin-3d";
+import Image from 'next/image';
 
 export default function FooterCoin3D({
   height = "h-[320px]",
@@ -22,20 +21,17 @@ export default function FooterCoin3D({
           </h3>
           <p className="text-sm text-cyan-200/80">Ride the Wave</p>
         </div>
-
         <div
           className="w-44 h-44 md:w-52 md:h-52 mt-8 relative"
           style={{ zIndex: 110 }}
         >
-          <Coin3D
-            spinSpeed={1.8}
-            metalness={0.9}
-            roughness={0.2}
-            frontImage="/images/cvibecoin.png"
-            backImage="/images/cvibecoin.png"
+          <Image
+            src="/images/cvibecoin.png"
+            alt="Cvibecoin"
+            width={200}
+            height={200}
           />
         </div>
-
         <div className="absolute bottom-6 left-0 right-0 text-center z-10">
           <p className="text-xs md:text-sm text-cyan-200/80 px-4">
             Community-driven • Fair Launch • Ocean Vibes

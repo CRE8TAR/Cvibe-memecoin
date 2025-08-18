@@ -99,7 +99,7 @@ export default function RoadmapPage() {
               </div>
               <div>
                 <Image
-                  src="public/images/cvibecoin.png"
+                  src="/images/cvibecoin.png"
                   alt="Roadmap Milestones"
                   width={560}
                   height={420}
