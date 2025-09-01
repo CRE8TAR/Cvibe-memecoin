@@ -6,7 +6,7 @@ import GlassCard from "./glass-card"
 
 export default function ContractAddress() {
   const [copied, setCopied] = useState(false)
-  const contractAddress = "7x8y9z1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p7q8r9s0t"
+  const contractAddress = "BbTVRjunZp12E3HXp29aPXAfG5Ca4hohTpArCACxpump"
 
   const copyAddress = async () => {
     try {
@@ -19,7 +19,7 @@ export default function ContractAddress() {
   }
 
   return (
-    <GlassCard title="You can find $CVIBE on Ethereum Here:">
+    <GlassCard title="You can find $CVIBE  Here:">
       <div className="space-y-4">
         <div className="text-cyan-50/90">
           <p className="text-sm font-semibold text-cyan-100 mb-2">Contract Address (CA):</p>
